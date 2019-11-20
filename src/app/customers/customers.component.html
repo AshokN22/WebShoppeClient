@@ -1,0 +1,47 @@
+<div class="Main">
+    <button mat-raised-button color="primary" style="margin-bottom:5px;" (click)="OpenDialog()">New Customer</button>
+    <mat-table [dataSource]="custList" class="mat-elevation-z8">
+        <ng-container matColumnDef="cid">
+            <mat-header-cell *matHeaderCellDef>Customer ID.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.cid}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="FirstName">
+            <mat-header-cell *matHeaderCellDef>First Name.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.firstName}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="MiddleName">
+            <mat-header-cell *matHeaderCellDef>Middle Name.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.middleName}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="LastName">
+            <mat-header-cell *matHeaderCellDef>Last Name.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.lastName}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Gender">
+            <mat-header-cell *matHeaderCellDef>Gender</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.gender}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Mobile">
+            <mat-header-cell *matHeaderCellDef>Mobile No.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.mobile}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="EMail">
+            <mat-header-cell *matHeaderCellDef>E-Mail ID</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Action1">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="onEdit(element.cid)">Edit</button></mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Action2">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="onDelete(element.cid)">Delete</button></mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Action3">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="onView(element.cid)">View</button></mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="ColumnsName"></mat-header-row>
+        <mat-row *matRowDef="let row; columns:ColumnsName;"></mat-row>
+    </mat-table>
+</div>

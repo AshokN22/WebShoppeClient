@@ -1,0 +1,35 @@
+<div class="Main">
+    <button mat-raised-button color="primary" style="margin-bottom:5px;" (click)="OpenDialog()">New Product</button>
+    <mat-table [dataSource]="prodList" class="mat-elevation-z8">
+        <ng-container matColumnDef="pid">
+            <mat-header-cell *matHeaderCellDef>Product ID.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.pid}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="pName">
+            <mat-header-cell *matHeaderCellDef>Name.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.pName}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <mat-header-cell *matHeaderCellDef>Price.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.price}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="availableQuantity">
+            <mat-header-cell *matHeaderCellDef>Available Quantity.</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.availableQuantity}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Action1">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="onEdit(element.pid)">Edit</button></mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Action2">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="onDelete(element.pid)">Delete</button></mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Action3">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="onView(element.pid)">View</button></mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="ColumnsName"></mat-header-row>
+        <mat-row *matRowDef="let row; columns:ColumnsName;"></mat-row>
+    </mat-table>
+</div>

@@ -1,0 +1,73 @@
+<div>
+    <form #f="ngForm">
+    <h2 mat-dialog-title>New Customer</h2>
+    <mat-dialog-content>
+       <div style="margin:0% 10% 0% 10%;">
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">First Name : </mat-label>
+                <input matInput required placeholder="Please enter first name." [(ngModel)]="cust.firstName" name="fname">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Middle Name : </mat-label>
+                <input matInput required placeholder="Please enter middle name." [(ngModel)]="cust.middleName" name="mname">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Last Name : </mat-label>
+                <input matInput required placeholder="Please enter last name." [(ngModel)]="cust.lastName" name="lname">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Gender : </mat-label>
+                <input matInput required placeholder="Please enter gender." [(ngModel)]="cust.gender" name="cgender">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Mobile No. : </mat-label>
+                <input matInput required placeholder="Please enter mobile no." [(ngModel)]="cust.mobile" name="cmobile">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">E-Mail ID : </mat-label>
+                <input matInput required placeholder="Please enter email id." [(ngModel)]="cust.email" name="cmobile">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Street 1 : </mat-label>
+                <input matInput required placeholder="Please enter street 1." [(ngModel)]="cust.street1" name="street1">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Street 2 : </mat-label>
+                <input matInput required placeholder="Please enter street 2." [(ngModel)]="cust.street2" name="street2">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">City : </mat-label>
+                <input matInput type="text" required placeholder="Please enter city." [(ngModel)]="cust.city" name="city" >
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">State : </mat-label>
+                <input matInput required type="text" placeholder="Please enter state." [(ngModel)]="cust.state" name="state" >
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Country : </mat-label>
+                <input matInput required type="text" placeholder="Please enter country." [(ngModel)]="cust.country" name="country" >
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Pin-Code : </mat-label>
+                <input matInput required type="text" placeholder="Please enter pin code." [(ngModel)]="cust.pinCode" name="pincode" >
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+       <button mat-raised-button mat-dialog-close (click)="OnOk()" color="primary" [disabled]="!f.valid">Save</button>
+       <button mat-raised-button mat-dialog-close (click)="OnCancel()" color="primary">Cancel</button>
+    </mat-dialog-actions>
+</form>
+</div>

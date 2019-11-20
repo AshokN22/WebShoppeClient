@@ -1,0 +1,11 @@
+.Main{
+    margin:5% 15% 25% 15%;
+    height: auto;
+    width:70%;
+}
+
+mat-grid-tile{
+    background-color: #cebee9; 
+    border:1px solid rgb(204, 193, 38);   
+    border-radius: 10px;
+}

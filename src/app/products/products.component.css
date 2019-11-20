@@ -1,0 +1,16 @@
+.Main{
+    margin:5% 5% 5% 5%;
+    height: auto;
+    width:90%;
+}
+
+table{
+    width:100%;
+}
+
+mat-cell a{
+    text-decoration: none;
+    color:blanchedalmond;
+    width:100%;
+    text-align: center;
+}

@@ -1,0 +1,55 @@
+<div style="margin:0% 27% 0% 27%;">
+    <form #f="ngForm">
+    <h3 style="text-align: center;">User Registration</h3>
+       <div>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">First Name : </mat-label>
+                <input matInput required placeholder="Please enter first name." [(ngModel)]="user.firstName" name="fname">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Middle Name : </mat-label>
+                <input matInput required placeholder="Please enter middle name." [(ngModel)]="user.middleName" name="mname">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always"  style="width:250px;">
+                <mat-label style="color:bisque;">Last Name : </mat-label>
+                <input matInput required placeholder="Please enter last name." [(ngModel)]="user.lastName" name="lname">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">User Name : </mat-label>
+                <input matInput required placeholder="Please enter gender." [(ngModel)]="user.userName"  name="cgender">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Password : </mat-label>
+                <input matInput type="password" required placeholder="Please enter mobile no." [(ngModel)]="user.password"  name="cmobile">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Confirm Password : </mat-label>
+                <input matInput type="password" required placeholder="Please enter email id." [(ngModel)]="user.confirmPassword" name="cmobile">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Email : </mat-label>
+                <input matInput required placeholder="Please enter street 1." [(ngModel)]="user.email" name="street1">
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Security Question : </mat-label>
+                <input matInput required placeholder="Please enter street 2." [(ngModel)]="user.securityQuestion" name="street2">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:250px;">
+                <mat-label style="color:bisque;">Answer : </mat-label>
+                <input matInput type="text" required placeholder="Please enter city." [(ngModel)]="user.securityAnswer"  name="city" >
+            </mat-form-field>
+        </div>
+        <div align="end">
+            <button mat-raised-button (click)="OnRegister()" color="primary">Register</button>
+        </div>
+</form>
+</div>
+

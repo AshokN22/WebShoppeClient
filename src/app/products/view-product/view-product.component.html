@@ -1,0 +1,15 @@
+<div>
+    <form>
+    <h2 mat-dialog-title>View Product</h2>
+    <mat-dialog-content>
+       <div style="margin:0% 10%;" id="content">
+            <div><label><pre>Product Name       : </pre></label>{{prod.pName}}</div>
+            <div><label><pre>Product Price      : </pre></label>{{prod.price}}</div>
+            <div><label><pre>Available Quantity : </pre></label>{{prod.availableQuantity}}</div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+       <button mat-raised-button mat-dialog-close (click)="OnCancel()" color="primary">Close</button>
+    </mat-dialog-actions>
+</form>
+</div>

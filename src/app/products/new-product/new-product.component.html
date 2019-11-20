@@ -1,0 +1,27 @@
+<div>
+    <form #f="ngForm">
+    <h2 mat-dialog-title>New Products</h2>
+    <mat-dialog-content>
+       <div style="margin:5% 10% 5% 10%;">
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:400px;">
+                <mat-label style="color:bisque;">Product Name : </mat-label>
+                <input matInput required placeholder="Please enter product name." [(ngModel)]="prod.pName" name="pname">
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:400px;">
+                <mat-label style="color:bisque;">Price : </mat-label>
+                <input matInput type="number" required placeholder="Please enter product price." [(ngModel)]="prod.price" name="price" >
+            </mat-form-field>
+            <br>
+            <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:400px;">
+                <mat-label style="color:bisque;">Available Quantity : </mat-label>
+                <input matInput required type="number" placeholder="Please enter product quantity." [(ngModel)]="prod.availableQuantity" name="quantity" >
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+       <button mat-raised-button mat-dialog-close (click)="OnOk()" color="primary" [disabled]="!f.valid">Save</button>
+       <button mat-raised-button mat-dialog-close (click)="OnCancel()" color="primary">Cancel</button>
+    </mat-dialog-actions>
+</form>
+</div>

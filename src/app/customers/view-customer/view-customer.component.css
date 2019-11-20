@@ -1,0 +1,8 @@
+#content > div {
+    font:normal 14px Trebuchet MS;
+    padding:10px 5px;
+}
+
+#content > div > label > pre{
+    display:inline;
+}

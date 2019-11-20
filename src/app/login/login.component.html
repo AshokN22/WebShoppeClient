@@ -1,0 +1,24 @@
+<div style="margin:5% 34% 5% 34%;width:400px;">
+    <form #f="ngForm">
+        <h2 style="text-align: center;">User Login</h2>
+        <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:400px;">
+            <mat-label style="color:bisque;">User Name : </mat-label>
+            <input matInput required placeholder="Please enter product name." [(ngModel)]="userName" name="pname">
+        </mat-form-field>
+        <br>
+        <mat-form-field hideRequiredMarker appearance="standard" floatLabel="always" style="width:400px;">
+            <mat-label style="color:bisque;">Password : </mat-label>
+            <input matInput type="password" required placeholder="Please enter product price." [(ngModel)]="password" name="price" >
+        </mat-form-field>
+        
+        <div>
+            <button mat-icon-button (click)="OnSocialLogin('Google')" style="margin-right:5px;float:left;" color="primary"><img src="https://img.icons8.com/color/48/000000/google-plus.png"></button>
+            <button mat-icon-button (click)="OnSocialLogin('Twitter')" style="margin-right:5px;float:left;" color="primary"><img src="https://img.icons8.com/color/48/000000/twitter.png"></button>
+            <button mat-icon-button (click)="OnSocialLogin('Facebook')" style="margin-right:5px;float:left;" color="primary"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"></button>
+            <button mat-icon-button (click)="OnSocialLogin('LinkedIn')" style="margin-right:5px;float:left;" color="primary"><img src="https://img.icons8.com/color/50/000000/linkedin.png"></button>
+
+
+            <button mat-raised-button (click)="OnLogin()" style="float:right;" color="primary" align="end">Login</button>
+        </div>
+    </form>
+</div>
